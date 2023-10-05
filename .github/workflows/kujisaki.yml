@@ -1,13 +1,14 @@
-name: test
+name: 久慈咲さんのファンやめます
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: '0 18 * * 6' # Sunday 03:00 (JST)
 jobs:
   tweet:
     runs-on: ubuntu-latest
     steps:
     - uses: noweh/post-tweet-v2-action@v1.0
       with:
-        message: "Hi, this is a test!"
+        message: "久慈咲さんのファンやめます"
         consumer-key: ${{ secrets.TWITTER_CONSUMER_KEY }}
         consumer-secret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
         access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
