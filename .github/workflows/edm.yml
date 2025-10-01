@@ -2,6 +2,7 @@ name: 人生どうでもEDM
 on:
   schedule:
     - cron: '0 5 * * 3' # Wednesday 14:00 (JST)
+permissions: {}  # Disable all GITHUB_TOKEN permissions; principle of least privilege
 jobs:
   tweet:
     runs-on: ubuntu-latest
